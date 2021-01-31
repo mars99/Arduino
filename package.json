@@ -1,0 +1,26 @@
+{
+  "name": "harecoffee",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^11.2.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "makexe": "electron-builder --windows --x64",
+    "makelinux": "electron-builder --linux --x64"
+},
+"build": {
+    "appId": "com.museatime.app",
+    "productName": "Museatime",
+    "copyright": "Copyright © 2020 museatime",
+    "win": {
+        "icon": "./image/ico.ico"
+    },
+    "mac": {
+        "icon": "./image/ico.png"
+    }
+}
+}

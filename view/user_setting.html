@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="page-enter" content="revealtrans(duration=seconds,transition=num)" />
+    <link rel="stylesheet" href="../../css/cafe.css" />
+    <link rel="stylesheet" href="../../css/cafe_table.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/file_admin.css" />
+
+</head>
+
+<body>
+    <div class="man_top_bar" style="-webkit-app-region: drag;">
+        <div class="win_left_title">资源云盘</div>
+        <img src="../../img/ico/off.png" onclick="close_win()" class="top_bar_done_ico" alt="">
+        <img src="../../img/ico/restore_win.png" class="top_bar_done_ico" alt="">
+        <img src="../../img/ico/small_window.png" class="top_bar_done_ico" alt="">
+    </div>
+    <div class="left_list_div">
+        <div class="count_size_div">
+            <div class="count_title">储存空间</div>
+            <div class="count_process">
+                <div class="count_process_value" style="width: 50%;"></div>
+            </div>
+            <div class="count_value_n">2000/5000 (GB)</div>
+        </div>
+        <div class="left_div_title">文件类型</div>
+        <div class="file_type_list">
+            <div class="file_left_item_child file_item_active" onclick="choose_left_item(this)">
+                <img src="../../img/ico/make_mycourse.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name">视频文件</div>
+            </div>
+            <div class="file_left_item_child" onclick="choose_left_item(this)">
+                <img src="../../img/ico/input_img_btn_normal.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name">图片库</div>
+            </div>
+            <div class="file_left_item_child" onclick="choose_left_item(this)">
+                <img src="../../img/ico/draft_box.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name">课件库</div>
+            </div>
+
+        </div>
+        <div class="left_div_title">传输文件</div>
+        <div class="file_type_list">
+
+            <div class="file_left_item_child" onclick="choose_left_item(this)">
+                <img src="../../img/ico/cloud_upload.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name">正在上传</div>
+            </div>
+            <div class="file_left_item_child" onclick="choose_left_item(this)">
+                <img src="../../img/ico/upload_finish.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name">上传完成</div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="right_div_box">
+        <!-- <div class="list_top_bar">
+            <select class="order_by_div">
+                <option  class="order_by_div_item">按创建时间</option>
+                <option class="order_by_div_item">按修改时间</option>
+                <option class="order_by_div_item">按文件名</option>
+                <option class="order_by_div_item">按文件大小</option>
+            </select>
+            <select class="order_by_div" style="margin-left: 30px; ">
+                <option  class="order_by_div_item">筛选</option>
+            </select>
+            <div class="top_list_bar_button_r">上传文件</div>
+            <div style="float: right; ">
+                <input type="text" class="search_input_box" placeholder="搜索文件...">
+                <img src="../../img/ico/search.png" class="search_ico" alt="">
+            </div>
+        </div> -->
+        <div class="table_div" id="table_1">
+            <div class="table_tool_bar">
+                <div class="table_foot_item_noborder_page_limit" style="margin-top: 15px;">数据总数:</div>
+                <div class="table_foot_item_noborder_page_limit_num">loading</div>
+                <div class="table_foot_item_noborder_page_limit" style="margin-top: 15px;"><img class="table_serach_ico" src="../../img/ico/search.png"></div>
+                <input type="text" searchkey="file_name,uid" placeholder="搜索任务名称/关键词 " onkeyup="searchdata(event) " class="search_input_data_table ">
+
+                <div class="add_button " onclick="open_win_add_data() ">上传文件</div>
+            </div>
+            <table class="table_cafe">
+                <thead>
+                    <tr>
+                        <th class="teble_header_item " data_key="uid">ID</th>
+                        <th class="teble_header_item " data_key="file_name">文件名</th>
+                        <th class="teble_header_item " data_key="file_size">大小</th>
+                        <th class="teble_header_item " max_with=200 data_key="file_add_user">上传者</th>
+
+
+                        <th class="teble_header_item ">操作</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table_body_cafe">
+
+                </tbody>
+
+
+            </table>
+            <div class=" table_foot_item_noborder_page_limit ">每页显示</div>
+            <input type="number " value="13 " onkeyup="reset_limit(event) " class="page_limit_item_input ">
+
+
+            <div class="table_foot " id="table_foot ">
+
+
+
+                <div class="table_foot_item_more " onclick="page_go(this) ">..............</div>
+
+
+
+
+            </div>
+            <div class="table_foot_item " style="display: none; " onclick="page_go(this) ">最后一页</div>
+            <div class="table_foot_item_goto " style="margin-right: 25px;; ">页</div>
+            <input type="number " value=" " placeholder="页码 " onkeyup="gotopage(event) " class="page_goto_item_input ">
+            <div class="table_foot_item_goto ">跳转到</div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+<script src="../../js/com/qrcore.js"></script>
+<script src="../../js/com/qrcode.js"></script>
+<script src="../../js/page/suger.js"></script>
+<script src="../../js/page/cafe.js"></script>
+<script src="../../js/page/cafe_table.js"></script>
+<script src="../../js/page/file_admin.js"></script>
+
+</html>

@@ -1,0 +1,143 @@
+@keyframes animation_button_scene {
+    0% {
+        width: 0px;
+        height: 0px;
+        background: rgba(0, 0, 0, 0);
+        left: calc(50vw - 0px);
+        top: calc(45vh - 40px);
+    }
+    100% {
+        width: 220px;
+        height: 80px;
+        background: rgba(0, 0, 0, 0.7);
+        left: calc(50vw - 110px);
+        top: calc(45vh - 0px);
+    }
+}
+
+@keyframes animation_button_scene_confirm {
+    0% {
+        width: 0px;
+        background: rgba(0, 0, 0, 0);
+        left: calc(50vw - 0px);
+        top: calc(35vh - 40px);
+    }
+    100% {
+        width: 220px;
+        background: rgba(0, 0, 0, 0.7);
+        left: calc(50vw - 110px);
+        top: calc(35vh - 0px);
+    }
+}
+
+.toast {
+    text-align: center;
+    overflow: hidden;
+    min-height: 70px;
+    width: 220px;
+    z-index: 99999999999;
+    color: #e6e6e6;
+    border-radius: 4px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    left: calc(50vw - 110px);
+    top: calc(45vh - 0px);
+    animation: animation_button_scene 0.3s;
+}
+
+.toast-confirm {
+    text-align: center;
+    overflow: hidden;
+    width: 220px;
+    z-index: 99999999999;
+    padding-top: 10px;
+    color: #e6e6e6;
+    border-radius: 4px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    left: calc(50vw - 110px);
+    top: calc(35vh - 0px);
+    animation: animation_button_scene_confirm 0.1s;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.toast-icon {
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+.toast-tip_from {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.toast-tip {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.toast-tip-confirm {
+    padding-top: 5px;
+    float: left;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.toat_img {
+    height: 30px;
+}
+
+.toast-sure-button {
+    float: left;
+    width: calc(50% - 1px);
+    height: 35px;
+    text-align: center;
+    user-select: none;
+    letter-spacing: 3px;
+    line-height: 35px;
+    border-right: solid 1px rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.toast-sure-button:hover {
+    opacity: 0.8;
+}
+
+.toast-sure-button:active {
+    opacity: 1;
+}
+
+.toast-cancel-button {
+    float: left;
+    width: calc(50% - 1px);
+    height: 35px;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.toast-cancel-button:hover {
+    float: left;
+    width: calc(50% - 1px);
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.toast-cancel-button:active {
+    color: rgba(255, 255, 255, 1);
+}

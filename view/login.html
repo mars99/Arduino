@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>July-Northwith</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta http-equiv="page-enter" content="revealtrans(duration=seconds,transition=num)" />
+    <link rel="stylesheet" href="../style/cafe.css" />
+    <link rel="stylesheet" href="../style/login.css" />
+</head>
+
+<body>
+
+
+
+
+    <div class="login_div">
+        <div class="login_left_div" style="user-select: none;">
+            <img src="../image/backimg.jpg" class="login_back" alt="">
+        </div>
+        <div class="login_right_div">
+            <div class="close_button" style="user-select: none;" onclick="closesure()">
+                <img src="../image/close.png" class="closebutton_img" alt="">
+            </div>
+
+            <div class="login_title" style="user-select: none;">登入</div>
+            <div class="input_div" id="input_div">
+                <div class="input_title" id="input_title" style="user-select: none;"> </div>
+                <input type="tel" maxlength="11" class="tel_input" onkeyup="checktel(event)" placeholder="TEL" id="tel_input">
+                <div class="sms_ver_div" id="sms_ver_div">
+                    <input readonly=true type="tel" id="code_0" maxlength="1" onkeydown="event_key(event)" onclick="choose_input(this)" class="ver_code_input_hidden input_active">
+                    <input readonly=true ttype="tel" id="code_1" maxlength="1" onkeydown="event_key(event)" onclick="choose_input(this)" class="ver_code_input_hidden">
+                    <input readonly=true ttype="tel" id="code_2" maxlength="1" onkeydown="event_key(event)" onclick="choose_input(this)" class="ver_code_input_hidden">
+                    <input readonly=true ttype="tel" id="code_3" maxlength="1" onkeydown="event_key(event)" onclick="choose_input(this)" class="ver_code_input_hidden">
+                    <input readonly=true ttype="tel" id="code_4" maxlength="1" onkeydown="event_key(event)" onclick="choose_input(this)" class="ver_code_input_hidden">
+                    <input readonly=true ttype="tel" id="code_5" maxlength="1" onkeydown="event_key(event)" onclick="choose_input(this)" class="ver_code_input_hidden">
+                    <div class="reload_sms_div_hidden" id="reload_sms_div">重新发送(60)</div>
+                </div>
+
+                <div class="button_out_box">
+                    <div class="send_button_hidden" id="login_button" onclick="sendsms()">发送验证码</div>
+                </div>
+
+
+
+            </div>
+            <img onclick="show_qr_box()" src="../image/login_ico.png" id="login_qr_ico" class="login_qr_ico" alt="">
+            <img onclick="show_tel_box()" src="../image/phone_ico.png" id="login_phone_ico" class="login_phone_ico_move_out_right_bottom" alt="">
+
+            <div class="hide_box_min" id="qr_box">
+                <div class="user_info_div_hidden" id="user_info_div">
+                    <img src="../image/personal_head_ico_gray.png" id="user_info_header" class="user_info_header" alt="">
+                    <div class="user_info_name" id="user_info_name">Loading</div>
+                    <div class="user_info_qr_status" id="user_info_qr_status"></div>
+                </div>
+                <img src="../image/loading02(1).gif" class="qr_img_pic" id="qr_img" alt="">
+
+                <div class="bot_text_info_title">微信扫描登入</div>
+
+                <div class="bot_text_info_des">使用「微信」扫一扫登入</div>
+            </div>
+            <div class="foot_right_text" style="user-select: none;">
+                <div style="font-size: 15px; font-weight: 300;letter-spacing: 1px;;"> hare.northwith.com </div>
+                ©2021 一路向北</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="../fun/qrcore.js"></script>
+<script src="../fun/qrcode.js"></script>
+<script src="../fun/cafe.js"></script>
+<script src="../fun/login.js"></script>
+
+
+</html>
+
+<script>
+    function yddebug() {
+        confirm_toast("msg", "toast测试", "提醒")
+    }
+</script>

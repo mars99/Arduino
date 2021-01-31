@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="page-enter" content="revealtrans(duration=seconds,transition=num)" />
+    <link rel="stylesheet" href="../../css/cafe.css" />
+    <link rel="stylesheet" href="../../css/cafe_table.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/up_load_file.css" />
+
+</head>
+
+<body>
+    <div class="man_top_bar" style="-webkit-app-region: drag;">
+        <div class="win_left_title">上传文件</div>
+        <img src="../../img/ico/off.png" onclick="close_win()" class="top_bar_done_ico" alt="">
+        <img src="../../img/ico/restore_win.png" class="top_bar_done_ico" alt="">
+        <img src="../../img/ico/small_window.png" class="top_bar_done_ico" alt="">
+    </div>
+    <div class="left_list_div">
+        <div class="count_size_div">
+            <div class="count_title">储存空间</div>
+            <div class="count_process">
+                <div class="count_process_value" style="width: 50%;"></div>
+            </div>
+            <div class="count_value_n">2000/5000 (GB)</div>
+        </div>
+
+        <div class="left_div_title">传输文件</div>
+        <div class="file_type_list">
+
+            <div class="file_left_item_child file_item_active" up_status="等待中" onclick="choose_left_item(this)">
+                <img src="../../img/ico/waiting_upload_ico.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name" id="wait_up_item_title">等待上传</div>
+            </div>
+            <div class="file_left_item_child" up_status="上传中" onclick="choose_left_item(this)">
+                <img src="../../img/ico/cloud_upload.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name" id="loading_up_item_title">正在上传</div>
+            </div>
+            <div class="file_left_item_child" up_status="已完成" onclick="choose_left_item(this)">
+                <img src="../../img/ico/upload_finish.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name" id="done_up_item_title">上传完成</div>
+            </div>
+            <div class="file_left_item_child" up_status="传输失败" onclick="choose_left_item(this)">
+                <img src="../../img/ico/error_upload_ico.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name" id="error_up_item_title">传输失败</div>
+            </div>
+            <div class="file_left_item_child" up_status="已删除" onclick="choose_left_item(this)">
+                <img src="../../img/ico/del_ico.png" class="file_left_item_child_ico" alt="">
+                <div class="file_left_item_child_name" id="del_up_item_title">已删除</div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="right_div_box">
+
+        <div class="table_div" id="table_1">
+            <div class="table_tool_bar" style="position: fixed; height: 70px;padding-top: 8px;; width: calc(100vw - 240px); padding-right: 20px;; left: 200px;padding-left: 20px;; ;z-index: 99; background-color: #fff; z-index: 99; ">
+                <div class="table_foot_item_noborder_page_limit" style="margin-top: 15px;" id="up_title_in">上传中的任务:</div>
+                <input type="file" id="up_file_tmp_s" multiple style="display:none" onchange="choosefilechange()">
+                <div class="add_button " onclick="removeall() ">清空任务队列</div>
+                <div class="add_button " onclick="choose_file_up() ">选择文件</div>
+
+
+            </div>
+            <table class="table_cafe" style="margin-top: 80px;">
+                <thead>
+
+                    <tr>
+                        <th class="teble_header_item " data_key="file_name">上传目录</th>
+                        <th class="teble_header_item " data_key="file_name">文件名</th>
+                        <th class="teble_header_item " data_key="file_size">大小</th>
+                        <th class="teble_header_item " data_key="file_size">状态</th>
+                        <th class="teble_header_item " data_key="file_size">修改时间</th>
+                        <th class="teble_header_item ">操作</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table_body_cafe" id="up_load_list_box">
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+        <div class="file_404" id="file_404" style="display: none;">
+            <img src="../../img/ico/search_error.png" class="no_file_ico" alt="">
+            <div class="no_file_text">暂无正在上传的文件/文件夹</div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+
+<script src="../../js/com/qrcore.js"></script>
+<script src="../../js/com/qrcode.js"></script>
+<script src="../../js/page/suger.js"></script>
+<script src="../../js/page/cafe.js"></script>
+<script src="../../js/com/qiniucore.js"></script>
+<script src="../../js/com/qiniu.js"></script>
+<script src="../../js/page/up_load_file.js"></script>
+
+</html>

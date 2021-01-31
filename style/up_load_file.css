@@ -1,0 +1,247 @@
+.left_list_div {
+    position: fixed;
+    width: 200px;
+    background-color: rgba(247, 247, 247, 1);
+    height: calc(100vh - 40px);
+    top: 40px;
+    left: 0px;
+}
+
+body {
+    background-color: #fff;
+}
+
+.right_div_box {
+    position: fixed;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 40px;
+    overflow-y: scroll;
+    background-color: #fff;
+    left: 200px;
+    z-index: 99;
+}
+
+.fixed_tab_header {
+    position: fixed;
+    top: 100px;
+}
+
+.count_size_div {
+    float: left;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+    padding-bottom: 15px;
+    ;
+}
+
+.count_title {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 200;
+    font-size: 15px;
+    margin-top: 30px;
+    ;
+}
+
+.count_process {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 2px;
+    height: 5px;
+    background-color: rgba(232, 232, 232, 1);
+}
+
+.count_process_value {
+    float: left;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(64, 98, 156, 1);
+}
+
+.count_value_n {
+    font-size: 14px;
+    margin-top: 5px;
+    float: left;
+    color: rgba(136, 136, 136, 1);
+    font-weight: 200;
+}
+
+.file_type_list {
+    font-weight: 100;
+    font-size: 15px;
+    width: 100%;
+    float: left;
+}
+
+.left_div_title {
+    font-weight: 100;
+    font-size: 15px;
+    width: 80%;
+    float: left;
+    margin-top: 15px;
+    ;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.file_left_item_child {
+    float: left;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.file_left_item_child:hover {
+    float: left;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #dedede;
+    margin-top: 8px;
+}
+
+.file_left_item_child:active {
+    opacity: 0.8;
+}
+
+.file_item_active {
+    background-color: #dedede;
+    opacity: 0.8;
+}
+
+.file_left_item_child_ico {
+    float: left;
+    width: 22px;
+    margin-top: 4px;
+    user-select: none;
+    height: 22px;
+}
+
+.file_left_item_child_name {
+    float: left;
+    width: calc(100% - 35px);
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 5px;
+    user-select: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list_top_bar {
+    position: fixed;
+    height: 80px;
+    width: calc(100vw - 220px);
+    right: 0px;
+    ;
+}
+
+.order_by_div {
+    float: left;
+    width: 130px;
+    text-align: center;
+    height: 30px;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 20px;
+}
+
+.top_list_bar_button_r {
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    border: solid 1px rgba(64, 98, 156, 1);
+    border-radius: 6px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-top: 20px;
+    background-color: rgba(64, 98, 156, 1);
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.top_list_bar_button_r:hover {
+    background-color: rgba(64, 98, 156, 0.8);
+}
+
+.top_list_bar_button_r:active {
+    background-color: rgba(64, 98, 156, 1);
+}
+
+.search_input_box {
+    float: left;
+    width: 230px;
+    text-align: left;
+    height: 26px;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 20px;
+}
+
+.search_ico {
+    float: left;
+    margin-left: -40px;
+    width: 25px;
+    height: 25px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 25px;
+    margin-top: 23px;
+}
+
+.file_404 {
+    position: fixed;
+    left: 200px;
+    width: calc(100vw - 200px);
+    top: 170px;
+    background-color: #fff;
+    height: calc(100vh - 170px);
+}
+
+.no_file_ico {
+    float: left;
+    width: 300px;
+    margin-top: 120px;
+    margin-left: calc(50vw - 250px);
+}
+
+.no_file_text {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 200;
+}

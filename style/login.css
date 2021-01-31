@@ -1,0 +1,529 @@
+body {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+    -webkit-app-region: drag;
+}
+
+.login_div {
+    position: fixed;
+    width: 900px;
+    height: 500px;
+    left: calc(50vw - 450px);
+    top: calc(50vh - 250px);
+    background-color: #fff;
+    box-shadow: 5px 10px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.login_left_div {
+    float: left;
+    width: 50%;
+    height: 500px;
+    border-right: #1c1c1a;
+}
+
+.close_button {
+    float: right;
+    top: 0px;
+    right: 0px;
+    width: 80px;
+    height: 80px;
+    border-bottom-left-radius: 100%;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 10px;
+    background: rgb(13,13,14);
+    background: linear-gradient(230deg, rgba(13,13,14,1) 0%, rgba(87,87,88,1) 64%, rgba(89,89,89,1) 100%);
+}
+
+.close_button:hover {
+    opacity: 0.8;
+    transition: 0.1s;
+    width: 90px;
+    height: 90px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+    ;
+}
+
+.close_button:active {
+    opacity: 1;
+    width: 90px;
+    height: 90px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+    ;
+}
+
+.login_back {
+    float: left;
+    width: 100%;
+}
+
+.closebutton_img {
+    float: left;
+    width: 30%;
+    margin-left: 15%;
+    margin-top: -5%;
+    height: 30%;
+    padding: 30%;
+}
+
+.closebutton_img:hover {
+    float: left;
+    width: 40%;
+    margin-left: 10%;
+    margin-top: -10%;
+    height: 40%;
+    padding: 30%;
+}
+
+.login_right_div {
+    float: left;
+    width: 50%;
+    height: 500px;
+}
+
+.login_title {
+    float: left;
+    margin-left: 10%;
+    margin-top: 70px;
+    font-size: 1.6rem;
+    font-weight: 100;
+    font-family: 微软雅黑;
+}
+
+.input_div {
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    width: 80%;
+    font-weight: 200;
+    font-family: 微软雅黑;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.input_div_hidden {
+    float: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    width: 80%;
+    font-weight: 200;
+    font-family: 微软雅黑;
+    transition: 0.2s;
+    opacity: 0;
+    ;
+}
+
+.input_title {
+    float: left;
+    margin-right: 10%;
+    margin-top: 50px;
+    min-width: 70%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    font-family: 微软雅黑;
+}
+
+.tel_input {
+    -webkit-app-region: no-drag;
+    float: left;
+    width: 80%;
+    margin-top: 20px;
+    line-height: 40px;
+    padding-right: 10px;
+    border: none;
+    font-size: 1.5rem;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+    outline: none;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.tel_input_hidden {
+    float: left;
+    width: 56%;
+    margin-top: 20px;
+    line-height: 40px;
+    padding-right: 10px;
+    border: none;
+    font-size: 1.5rem;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+    outline: none;
+    opacity: 0;
+    transition: 0.3s;
+    ;
+}
+
+.button_out_box {
+    float: left;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.send_button_hidden {
+    float: left;
+    width: 70%;
+    margin-right: 25%;
+    margin-top: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #1c1c1a;
+    color: #fff;
+    text-align: center;
+    user-select: none;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.send_button:hover {
+    opacity: 0.6;
+    transition: 0.1s;
+}
+
+.send_button:active {
+    opacity: 0.9;
+    transition: 0.1s;
+}
+
+.send_button {
+    float: left;
+    width: 70%;
+    margin-right: 25%;
+    height: 40px;
+    margin-top: 0px;
+    line-height: 40px;
+    background-color: #1c1c1a;
+    color: #fff;
+    text-align: center;
+    user-select: none;
+    letter-spacing: 2px;
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #999;
+    font-size: 1.3rem;
+}
+
+ ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #999;
+    font-size: 16px;
+    font-size: 1.3rem;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #999;
+    font-size: 16px;
+    font-size: 1.3rem;
+}
+
+.sms_ver_div {
+    position: fixed;
+    margin-top: 100px;
+    margin-left: -8px;
+    width: 400px;
+    ;
+    height: 50px;
+    display: none;
+}
+
+.ver_code_input {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    outline: none;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 0px;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.ver_code_input_hidden {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    outline: none;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 50px;
+    transition: 0.5s;
+    opacity: 0;
+    ;
+    ;
+}
+
+.input_active {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+}
+
+.foot_text {
+    margin-top: 20px;
+    width: 100vw;
+    position: fixed;
+    top: 720px;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #1c1c1a;
+    font-family: 微软雅黑;
+    line-height: 22px;
+    user-select: none;
+}
+
+.reload_sms_div {
+    float: left;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: 1s;
+}
+
+.reload_sms_div_hidden {
+    float: left;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.foot_right_text {
+    position: fixed;
+    bottom: 10px;
+    width: 50%;
+    line-height: 20px;
+    ;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.login_qr_ico {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.2s;
+}
+
+.login_qr_ico_move_out_right_bottom {
+    position: fixed;
+    right: -100px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.2s;
+}
+
+.login_qr_ico:hover {
+    right: 18px;
+    bottom: 13px;
+    width: 34px;
+    height: 34px;
+    opacity: 0.8;
+}
+
+.login_qr_ico:active {
+    right: 20px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+}
+
+.login_phone_ico_move_out_right_bottom {
+    position: fixed;
+    right: -100px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.2s;
+}
+
+.login_phone_ico {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.2s;
+    ;
+}
+
+.login_phone_ico:hover {
+    right: 18px;
+    bottom: 13px;
+    width: 34px;
+    height: 34px;
+    opacity: 0.8;
+}
+
+.login_phone_ico:active {
+    right: 20px;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+}
+
+.hide_box_min {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 97;
+    background-color: #717171;
+    border-radius: 200%;
+    overflow: hidden;
+}
+
+.hide_box_min {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 97;
+    background-color: #fff;
+    border-radius: 200%;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.hide_box_max {
+    position: fixed;
+    right: calc(25vw - 125px);
+    bottom: 100px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    z-index: 97;
+    background-color: #fff;
+    border-radius: 0%;
+    transition: 0.3s;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.bot_text_info_title {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    white-space: nowrap;
+}
+
+.bot_text_info_des {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+.qr_img_pic {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.user_info_div {
+    position: absolute;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+    opacity: 1;
+    ;
+}
+
+.user_info_div_hidden {
+    position: absolute;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+    opacity: 0;
+    ;
+}
+
+.user_info_header {
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 200%;
+    margin-top: 30px;
+    border: solid 0.5px #dedede;
+}
+
+.user_info_header_noborder {
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 0%;
+    margin-top: 30px;
+    border: none
+}
+
+.user_info_name {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 18px;
+    ;
+    ;
+}
+
+.user_info_qr_status {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 16px;
+    ;
+    ;
+}
